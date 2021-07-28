@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <title>
+      Form Registration
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="background-image: linear-gradient(to bottom right, orchid, lightskyblue);
+">
+<style>
+
+input
+  {
+    padding: 15px 35px;
+    font-size: 16px;
+    color:black;
+    background-color:white;
+    border: 1px black;
+    border-radius: 30px;
+    margin-top: 5px;
+    size: 50;
+    color:#50394c;
+  
+   
+  }
+
+  input:focus 
+  {
+    outline: none;
+    background-color:#d5e1df;
+    color:#50394c;
+
+  }
+ 
+fieldset
+{
+  
+  border-color:#ada397;
+  background-color:#e4d1d1;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top:10px;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right: 30px;
+  
+}
+legend
+{
+  color:#50394c; text-shadow: 2px 2px 2px ;
+  background-color: lightpink;
+  padding: 10px 8px;
+}
+  button 
+  {
+    display: block;
+    padding: 12px 38px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    border: 2px solid var(--blue);
+    border-radius: 24px;
+    cursor: pointer;
+    margin: auto;  
+  }
+  button:hover 
+  {
+    color:white;
+    background-color:lightskyblue;
+    
+  }
+
+</style> 
+    <form method="get" style="color:brown;  font-size:larger ; text-align:left;font-weight: bold; text-shadow:1px 1px lightyellow;"   name="myForm" id="form"  return onsubmit="validateForm()"  autocomplete="on" >
+      <fieldset>
+   <legend style="font-size: xx-large;">Sleep Tracker </legend>
+        
+   <label for="todaydate">Date&emsp;&emsp;&emsp;:</label>
+        <input type="date" id="dob" name="dob"   required><br>
+        <br>
+        <label for="part_name">Name&emsp;&emsp; :</label>
+        <input type="text"  id=part_name name="part_name" placeholder="Dwight Schrute"   required ><br>
+        <br>
+    <label> Age&emsp;&emsp;&emsp;:
+    </label> 
+  
+    <input type="number" id="age" name="age" required><br><br>
+    <label>Sleep Time :</label>
+    <input type="text" id="t1" name="t1" placeholder="eg:10" title="Please mention in hour format" required><br><br>
+    <label>Wakeup Time :</label>
+    <input type="text" id="t2" name="t2" title="Please mention in hour format" required return onblur="myFunction()"><br><br>
+    <label>Time Difference :</label> 
+    <input type="text" id="diff" name="diff" ><br><br>
+        <label for="disturb">Disturbances :</label>
+        <input type="text" id="disturb" name="disturb"  title="Please mention Disturbances you face during your  sleep"  required ><br>
+       <br>
+        <button id="a" type="submit" value="submit">Submit</button><br>
+        <button id="a" type="reset" value="Clear"  >Clear</button>
+</form>
+</fieldset>
+<script>
+
+function myFunction() {
+  var x = document.getElementById("t1").value;
+  var y = document.getElementById("t2").value;
+  if(Number(x)>Number(y)){
+    var td =(12-Number(x))+Number(y);  
+  }
+ else{
+    var td =Number(y)-Number(x); 
+ }
+
+  document.getElementById("diff").value=(td);
+
+}
+</script>
+</body>
+</html>
+
+
