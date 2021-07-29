@@ -10,7 +10,7 @@
 ">
 <style>
 
-input
+input , select
   {
     padding: 15px 35px;
     font-size: 16px;
@@ -51,6 +51,7 @@ legend
   color:#50394c; text-shadow: 2px 2px 2px ;
   background-color: lightpink;
   padding: 10px 8px;
+  margin-left: 30%;
 }
   button 
   {
@@ -76,7 +77,7 @@ legend
 </style> 
     <form method="get" style="color:brown;  font-size:larger ; text-align:left;font-weight: bold; text-shadow:1px 1px lightyellow;"   name="myForm" id="form"  return onsubmit="validateForm()"  autocomplete="on" >
       <fieldset>
-   <legend style="font-size: xx-large;">Sleep Tracker </legend>
+   <legend style="font-size: xx-large;" >Sleep Tracker </legend>
         
    <label for="todaydate">Date&emsp;&emsp;&emsp;:</label>
         <input type="date" id="dob" name="dob"   required><br>
@@ -95,7 +96,14 @@ legend
     <label>Time Difference :</label> 
     <input type="text" id="diff" name="diff" ><br><br>
         <label for="disturb">Disturbances :</label>
-        <input type="text" id="disturb" name="disturb"  title="Please mention Disturbances you face during your  sleep"  required ><br>
+        <select name="disturb" id="disturb">
+          <option value="Phone">Phone</option>
+          <option value="stress">stress</option>
+          <option value="Uncomfortable sleeping environment">Uncomfortable sleeping environment</option>
+          <option value="sickness">sickness</option>
+        </select><br>
+        
+      <!-- <input type="text" id="disturb" name="disturb"  title="Please mention Disturbances you face during your  sleep"  required ><br>  -->
        <br>
         <button id="a" type="submit" value="submit">Submit</button><br>
         <button id="a" type="reset" value="Clear"  >Clear</button>
